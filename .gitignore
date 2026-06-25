@@ -1,0 +1,47 @@
+# Keep tmp/ itself tracked, ignore generated contents.
+/tmp/*
+!/tmp/.gitkeep
+
+# Local secrets/config
+.env
+.env.*
+*.env
+*.env.*
+!.env.example
+*.tfvars
+*.tfvars.json
+*.auto.tfvars
+*.auto.tfvars.json
+
+# Generated OpenBSD images and downloads if created outside tmp by mistake
+cache/
+dist/
+build/
+work/
+*.img
+*.iso
+*.raw
+*.qcow2
+*.log
+
+# Terraform local state/cache
+**/.terraform/
+**/terraform.tfstate
+**/terraform.tfstate.*
+**/*.tfplan
+**/tfplan
+**/crash.log
+**/crash.*.log
+**/override.tf
+**/override.tf.json
+**/*_override.tf
+**/*_override.tf.json
+
+# Generated inventories
+/inventory/hosts
+/inventory/*.retry
+
+# Python
+__pycache__/
+*.pyc
+
